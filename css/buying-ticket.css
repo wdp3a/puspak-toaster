@@ -1,0 +1,253 @@
+/*  BUYING TICKET  */
+
+.tkt-buyer{
+    /* background: #c7342a; */
+    background: #fff;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    overflow-y:scroll;
+}
+
+/* haeder */
+.tkt-buyer-header{ 
+    display: grid;
+    grid-template-columns: 44px auto;
+    align-items: center;
+    margin: 20px 0px 0px 0px;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0px;
+    background: var(--white);
+}
+.tkt-buyer .cancel-btn .btn-lines{ background: var(--black); }
+
+.tkt-buyer .heading{
+    color: var(--black-2);
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    padding-right: 44px;
+}
+.tkt-buyer .heading .heading-text{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--black-2);
+}
+
+/*  <==>  body  <==>  */
+.tkt-buyer-body{
+    padding: 20px;
+}
+.tkt-buyer-form{
+    width: 100%;
+    max-width: 700px;
+    user-select: text;
+    margin: auto;
+}
+
+/* <==***==> Container element of the form inputs of bus no, route, stops and price <==***==> */
+.bus-stop-payment-detail{
+    background: var(--bg-white);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #1f1f1f;
+}
+
+/*  <=>  bus no  <=>  */
+.bus-no-detail .about-input{
+    text-align: center;
+    margin: 10px 0px 15px 0px;
+    font-size: 20px;
+}
+.bus-no{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bus-no-starting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.bus-no-label{
+    color: #1f1f1f;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #a0a0a0;
+    padding: 10px;
+    margin: 5px 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition:all 0.1s ease-in-out;
+    -webkit-transition:all 0.1s ease-in-out;
+    -moz-transition:all 0.1s ease-in-out;
+    -ms-transition:all 0.1s ease-in-out;
+    -o-transition:all 0.1s ease-in-out;
+    user-select: none;
+}
+.bus-no-label.checked{
+    background: var(--red-pantone);
+    border: 1px solid var(--red-pantone);
+    color: var(--white);
+}
+.bus-no-label .input{
+    appearance: none;
+    display: none;
+}
+
+.bus-no-ending{
+    margin: 10px 0px;
+
+}
+.bus-no-ending .input::-webkit-outer-spin-button,
+.bus-no-ending .input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.bus-no-ending .input[type=number] {
+  -moz-appearance: textfield;
+}
+.bus-no-ending .input{
+    padding: 10px;
+    font-size: 18px;
+    color: #1f1f1f;
+    width: 170px;
+    text-align: center;
+    background: transparent;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+
+}
+
+
+/*  <=>  route no and stop details <=>  */
+.route-stop .about-info{
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.route-stop {
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.route-stop .input{
+    padding: 10px 10px;
+    font-size: 18px;
+    width: 100%;
+    outline: none;
+}
+
+.stops{
+    margin-bottom: 0px;
+}
+.route-stop.stops .starting-input{
+    margin-bottom: 10px;
+}
+
+
+/*  <=>  payment detail <=>  */
+.lable-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.radio-lable{
+    cursor: pointer;
+    color: #1f1f1f;
+    text-align: center;
+    border: 1px solid #a0a0a0;
+    padding: 10px;
+    margin: 0px 5px 10px 5px;
+    width: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition:all 0.1s ease-in-out;
+    -webkit-transition:all 0.1s ease-in-out;
+    -moz-transition:all 0.1s ease-in-out;
+    -ms-transition:all 0.1s ease-in-out;
+    -o-transition:all 0.1s ease-in-out;
+    user-select: none;
+}
+.radio-lable .input{
+    appearance: none;
+    display: none;
+}
+.radio-lable.checked{
+    background: var(--red-pantone);
+    border: 1px solid var(--red-pantone);
+    color: var(--white);
+}
+.tkt-color-label-R.checked{
+    background: #d63a3a;
+    border: 1px solid #d63a3a;
+}
+.tkt-color-label-G.checked{
+    background: #219653;
+    border: 1px solid #219653;
+}
+.tkt-color-label-O.checked{
+    background: #f28627;
+    border: 1px solid #f28627;
+}
+.tkt-color-label-B.checked{
+    background: #113ecb;
+    border: 1px solid #113ecb;
+}
+.tkt-color-label-E.checked{
+    background: #1bbabf;
+    border: 1px solid #1bbabf;
+}
+.radio-lable .input{
+    appearance: none;
+    display: none;
+}
+.payment-detail .about-info{
+    font-size: 18px;
+    margin: 0px 5px 3px 5px;
+}
+
+
+.submit-btn-wrapper{
+    text-align: center;
+    margin-bottom: 150px;
+}
+.submit-btn-wrapper .btn{
+    font-size: 22px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    outline: none;
+    background: var(--bg-white);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    user-select: none;
+}
+.submit-btn-wrapper .btn:hover{ background: #e4e4e4; }
+.submit-btn-wrapper .btn:active{ background: #c7c7c7; }

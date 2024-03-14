@@ -1,0 +1,191 @@
+.bus-stops{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    overflow-y: scroll;
+    backdrop-filter: blur(10px);
+    background: var(--white);
+    padding-bottom: 60px;
+}
+
+/* header */
+.bus-stops .header {
+    display: grid;
+    grid-template-columns: 44px auto;
+    align-items: center;
+    margin: 20px 0px 10px 0px;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0px;
+    background: var(--white);
+}
+.bus-stops .header .heading {
+    color: var(--black-2);
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    padding-right: 44px;
+}
+.bus-stops .header .hide-btn .btn-lines{ background: var(--black); }
+
+/* stop saver */
+.stop-saver, .saved-stops{
+    margin: 20px;
+    padding: 20px;
+    background: var(--bg-white);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    max-width: 768px;
+}
+@media screen and (min-width:808px) { .stop-saver, .saved-stops{ margin: 20px auto; } }
+
+.stop-saver .about{
+    font-size: 18px;
+    color: var(--black-2);
+    padding-bottom: 20px;
+}
+
+.stop-saver-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.stop-saver-form .input{
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    background: var(--white-2);
+}
+.save-btn{
+    cursor: pointer;
+    background: var(--white-2);
+    color: var(--black-4);
+    border: 1px solid var(--grey-1);
+    font-size: 20px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: color 0.1s ease-in-out, background 0.2s ease-in-out;
+    -webkit-transition: color 0.1s ease-in-out, background 0.2s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out, background 0.2s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out, background 0.2s ease-in-out;
+    -o-transition: color 0.1s ease-in-out, background 0.2s ease-in-out;
+}
+.save-btn:hover{
+    color: var(--black-1);
+    background: var(--grey-5);
+}
+.save-btn:active{
+    color: var(--white-1);
+    background: var(--grey-4);
+}
+
+
+/* saved stops */
+.saved-stops .heading{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 20px;
+    color: var(--black-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.saved-stops .heading .refresh-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.saved-stops .heading .refresh-btn:active{
+    background: var(--grey-4);
+}
+
+.stop-delete-container{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+.stop-delete-container:last-child{ margin-bottom: 0px; }
+.starting-ending{
+    background: var(--white-2);
+    border: 1px solid var(--grey-3);
+    border-radius: 10px 0px 0px 10px;
+    -webkit-border-radius: 10px 0px 0px 10px;
+    -moz-border-radius: 10px 0px 0px 10px;
+    -ms-border-radius: 10px 0px 0px 10px;
+    -o-border-radius: 10px 0px 0px 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.stop-delete-container .starting-ending .starting-ending-stop{
+    display: flex;
+    align-items: center;
+}
+.stop-delete-container .starting-ending .starting-ending-stop:first-child{ padding-bottom: 5px; }
+.stop-delete-container .starting-ending i{
+    font-size: 14px;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    color: var(--black-3);
+}
+.stop-delete-container .starting-ending p{
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.delete-stop{
+    border-top: 1px solid var(--grey-3);
+    border-right: 1px solid var(--grey-3);
+    border-bottom: 1px solid var(--grey-3);
+    border-radius:  0px 10px 10px 0px;
+    -webkit-border-radius:  0px 10px 10px 0px;
+    -moz-border-radius:  0px 10px 10px 0px;
+    -ms-border-radius:  0px 10px 10px 0px;
+    -o-border-radius:  0px 10px 10px 0px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: #f00;
+    cursor: pointer;
+}
+
+
+.no-saved-stop-text.hide{
+    display: none;
+}

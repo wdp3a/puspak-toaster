@@ -1,0 +1,164 @@
+/* 
+    TICKET DISPLAYED
+*/
+.tkt-lrg-container{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    padding: 16px;
+    width: 100%;
+    overflow-y: scroll;
+    backdrop-filter: blur(20px);
+}
+
+.tkt-lrg-container .tkt-lrg-container-header{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+html.fullscreen .tkt-lrg-container .tkt-lrg-container-header{top: 60px;}
+.tkt-lrg-container .tkt-lrg-container-header .all-tkts-btn{
+    color: #ffffff;
+    cursor: pointer;
+    padding: 5px 0px;
+    opacity: 0.8;
+    transition: 0.1s all ease-in-out;
+    -webkit-transition: 0.1s all ease-in-out;
+    -moz-transition: 0.1s all ease-in-out;
+    -ms-transition: 0.1s all ease-in-out;
+    -o-transition: 0.1s all ease-in-out;
+}
+.tkt-lrg-container .tkt-lrg-container-header .all-tkts-btn:hover{opacity: 1;}
+
+.tkt-lrg-container .tkt-lrg-wrapper{
+    background: var(--white);
+    width: 100%;
+    max-width: 738px;
+    padding: 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: auto;
+    box-shadow:
+        0px 0px 2.7px rgba(0, 0, 0, 0.028),
+        0px 0px 6.6px rgba(0, 0, 0, 0.04),
+        0px 0px 12.4px rgba(0, 0, 0, 0.05),
+        0px 0px 22.1px rgba(0, 0, 0, 0.06),
+        0px 0px 41.4px rgba(0, 0, 0, 0.072),
+        0px 0px 99px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.tkt-lrg-container .tkt-lrg-wrapper .tkt-invalid-container .tkt-invalid{
+    border: 3px solid #c4271b;
+    opacity: 0.9;
+    text-align: center;
+    border-radius: 2px;
+    padding: 5px 10px;
+    transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+}
+.tkt-lrg-container .tkt-lrg-wrapper .tkt-invalid-container .tkt-invalid .tkt-invalid-text{
+    color: #c4271b;
+    font-family: Stencil Std;
+    line-height: 100%;
+    position: relative;
+    top: 7px;
+    font-size: 55px;
+}
+
+
+.tkt-lrg .heading{
+    font-weight: 500;
+    text-align: center;
+    padding: 5px 20px 15px 20px;
+    font-size: 19px;
+}
+
+/* bs-pr-rt-fr-tm-qn -> bus-no, price, route-no, fare, booking-time, quantity */
+/* element with dp flex and all in center */
+.rt-fr-tm-qn,
+.bus-and-price-detail,
+.tkt-lrg .qr-wrapper .qr-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tkt-lrg-sep{
+    height: 1px;
+    background: #888888;
+    margin: 8px 0px;
+}
+
+.tkt-lrg .text{
+    font-size: 14px;
+    line-height: 120%;
+    margin-bottom: 3px;
+    margin-top: 2px;
+}
+
+.tkt-lrg-value{
+    font-size: 19px;
+}
+
+.fare-wrapper,
+.quan-wrapper{
+    text-align: right;
+}
+
+.rt-fr-tm-qn,
+.stop-detail{
+    margin-bottom: 15px;
+}
+.tkt-lrg .ending-stop{
+    margin-bottom: 0px;
+}
+
+.tkt-lrg .qr-wrapper{
+ text-align: center;
+}
+.tkt-lrg .qr-wrapper .qr-no{
+    font-size: 14px;
+    margin-top: 15px;
+    color: #333333;
+}
+
+.tkt-lrg .qr-wrapper .show-qr-code{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    color: #fff;
+}
+.tkt-lrg .qr-wrapper .qr-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tkt-lrg .qr-wrapper .qr-icon{
+    color: var(--white-2);
+    margin-right: 5px;
+    font-size: 20px;
+}

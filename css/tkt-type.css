@@ -1,0 +1,42 @@
+/*
+    TICKET TYPES
+*/
+.tkt-type-container{
+    margin: 30px 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html.fullscreen .tkt-type-container{
+    margin: 60px 10px 30px 10px;
+}
+
+.tkt-type-container .tkt-type{
+    background: var(--white-2);
+    padding: 5px 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 1px solid #cfcfcf;
+    opacity: 0.7;
+    user-select: none;
+}
+.tkt-type-container .tkt-type:first-child{
+    margin-right: 10px;
+    cursor: pointer;
+    opacity: 1;
+}
+.tkt-type-container .tkt-type:last-child{
+    margin-left: 10px;
+}
+
+.tkt-type-container .tkt-type p{
+    line-height: 130%;
+    font-size: 18px;
+    font-weight: 600;
+}

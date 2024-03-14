@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/favicon-16x16.png">
+    <link rel="manifest" href="./src/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff">
+    <meta name="mobile-web-app-capable" content="yes"/>
+
+    <title>DTC Bus Ticket</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tkt-dp.css">
+    <link rel="stylesheet" href="css/tkt-type.css">
+    <link rel="stylesheet" href="css/puchased-tkt.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/buying-ticket.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/bus-stops.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+
+</head>
+<body id="body">
+
+    <!-- TICKET TYPES (BUS, METRO and PASS) -->
+    <div class="tkt-type-container">
+        <div class="tkt-type-bus tkt-type">
+            <div class="bus-tkt"><p>Bus<br>Ticket</p></div>
+        </div>
+        <div class="tkt-type-pass tkt-type">
+            <div class="bus-pass"><p>Bus<br>Pass</p></div>
+        </div>
+        <div class="tkt-type-ticekt tkt-type">
+            <div class="metro-tkt"><p>Metro<br>Ticket</p></div>
+        </div>
+    </div>
+
+
+
+    <!-- PURCHASED TICKET SECTION -->
+    <div class="purchased-tkt-container">
+        <div class="purchased-bus-tkt purchased-tkt">
+            <div class="tkt-header">
+                <div class="heading"><p>My Tickets</p></div>
+                <div class="view-all"><p>View all tickets</p></div>
+            </div>
+            <div class="tkt-container">
+                <!-- Element will be added by javascript -->
+            </div>
+            <div class="no-tkt-available"><p>No Ticket Available</p></div>
+        </div>
+        <div class="purchased-metro-tkt purchased-tkt">
+            <div class="tkt-header">
+                <div class="heading"><p>My Metro Tickets</p></div>
+                <div class="view-all"><p>View all</p></div>
+            </div>
+            <div class="no-tkt-available"><p>No Ticket Available</p></div>
+        </div>
+        <div class="purchased-bus-pass purchased-tkt">
+            <div class="tkt-header">
+                <div class="heading"><p>My Bus Daily Pass</p></div>
+                <div class="view-all"><p>View all</p></div>
+            </div>
+            <div class="no-tkt-available"><p>No pass to show</p></div>
+        </div>
+    </div>
+    
+    <!-- VIEW ALL PURCHASED TICKETS -->
+    <div class="all-purchased-tkt-container hidden-element">
+        <div class="all-purchased-tkt-header">
+            <div class="hide-btn">
+                <div class="btn-wrapper">
+                    <div class="btn-lines btn-line-1"></div>
+                    <div class="btn-lines btn-line-2"></div>
+                </div>
+            </div>
+            <div class="heading">
+                <p>All Tickets</p>
+            </div>
+        </div>
+        <div id="no-tkt-purchased" class="no-tkt-available hide">
+            <p>No Ticket Available</p>
+        </div>
+        <div class="all-tkts">
+            <!-- Element will be added by javascript -->
+        </div>
+    </div>
+
+
+    <!-- TICKET DISPLAYED IN LARGE FORM -->
+    <div class="tkt-lrg-container hidden-element" style="background: rgb(27, 186, 191);">
+        <div class="tkt-lrg-container-header">
+            <div class="btn-wrapper">
+                <div class="btn-lines btn-line-1"></div>
+                <div class="btn-lines btn-line-2"></div>
+            </div>
+            <div class="all-tkts-btn"><p><i class="fa-solid fa-clock-rotate-left"></i> All Tickets</p></div>
+        </div>
+        
+        <div class="tkt-lrg-wrapper">
+            <!-- Element will be added by javascript -->
+        </div>
+    </div>
+    
+
+    <!-- BUYING TICKET -->
+    <div class="tkt-buyer hidden-element">
+        <div class="tkt-buyer-header">
+            <div class="cancel-btn">
+                <div class="btn-wrapper">
+                    <div class="btn-lines btn-line-1"></div>
+                    <div class="btn-lines btn-line-2"></div>
+                </div>
+            </div>
+            <div class="heading">
+                <p class="heading-text">Buy Tickets</p>
+            </div>
+        </div>
+        <div class="tkt-buyer-body">
+            <form class="tkt-buyer-form form" id="tkt-buyer-form">
+                <div class="bus-no-detail bus-stop-payment-detail">
+                    <div class="about-input">
+                        <p class="about-input-text">Enter Bus Number</p>
+                    </div>
+                    <div class="bus-no">
+                        <div class="bus-no-starting">
+                            <label class="bus-no-label" for="DL1PB"><input required class="input" id="DL1PB" type="radio" name="starting-no" value="DL1PB">DL1PB</label>
+                            <label class="bus-no-label" for="DL1PC"><input class="input" id="DL1PC" type="radio" name="starting-no" value="DL1PC">DL1PC</label>
+                            <label class="bus-no-label" for="DL1PD"><input class="input" id="DL1PD" type="radio" name="starting-no" value="DL1PD">DL1PD</label>
+                            <label class="bus-no-label" for="DL51GD"><input class="input" id="DL51GD" type="radio" name="starting-no" value="DL51GD">DL51GD</label>
+                            <label class="bus-no-label" for="DL51EV"><input class="input" id="DL51EV" type="radio" name="starting-no" value="DL51EV">DL51EV</label>
+                        </div>
+                        <div class="bus-no-ending">
+                            <input placeholder="Enter bus no." required class="input" id="bus-no-input" type="number">
+                        </div>
+                    </div>
+                </div>
+                <div class="route-and-stop-details bus-stop-payment-detail">
+                    <div class="route-stop route-no">
+                        <div class="about-info"><p class="about-info-text">Route info</p></div>
+                        <input id="route-input" required placeholder="Enter route no." type="text" class="input">
+                    </div>
+                    <div class="route-stop stops">
+                        <div class="about-info"><p class="about-info-text">From - To</p></div>
+                        <input id="starting-stop-input" required placeholder="Starting stop" type="text" class="starting-input input">
+                        <input id="ending-stop-input" required placeholder="Ending Stop" type="text" class="ending-input input">
+                    </div>
+                </div>
+                <div class="payment-detail bus-stop-payment-detail">
+                    <div class="tkt-quan">
+                        <div class="about-info"><p class="about-info-text">Number of tickets</p></div>
+                        <div class="tkt-quan-lable-wrapper lable-wrapper">
+                            <label class="radio-lable tkt-quan-label" for="1"><input required class="input" id="1" type="radio" name="tkt-quan" value="1">1</label>
+                            <label class="radio-lable tkt-quan-label" for="2"><input class="input" id="2" type="radio" name="tkt-quan" value="2">2</label>
+                            <label class="radio-lable tkt-quan-label" for="3"><input class="input" id="3" type="radio" name="tkt-quan" value="3">3</label>
+                        </div>
+                    </div>
+                    <div class="bus-color">
+                        <div class="about-info"><p class="about-info-text">Bus</p></div>
+                        <div class="tkt-color-lable-wrapper lable-wrapper">
+                            <label class="radio-lable tkt-color-label tkt-color-label-R" for="R"><input required class="input" id="R" type="radio" name="tkt-color" value="R">R</label>
+                            <label class="radio-lable tkt-color-label tkt-color-label-G" for="G"><input class="input" id="G" type="radio" name="tkt-color" value="G">G</label>
+                            <label class="radio-lable tkt-color-label tkt-color-label-O" for="O"><input class="input" id="O" type="radio" name="tkt-color" value="O">O</label>
+                            <label class="radio-lable tkt-color-label tkt-color-label-B" for="B"><input class="input" id="B" type="radio" name="tkt-color" value="B">B</label>
+                            <label class="radio-lable tkt-color-label tkt-color-label-E" for="E"><input class="input" id="E" type="radio" name="tkt-color" value="E">E</label>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <div class="about-info"><p class="about-info-text">Amount Payable</p></div>
+                        <div class="tkt-color-lable-wrapper lable-wrapper">
+                            <label class="radio-lable amount-lable" for="5"><input required class="input" id="5" type="radio" name="amount" value="5">5</label>
+                            <label class="radio-lable amount-lable" for="10"><input class="input" id="10" type="radio" name="amount" value="10">10</label>
+                            <label class="radio-lable amount-lable" for="15"><input class="input" id="15" type="radio" name="amount" value="15">15</label>
+                            <label class="radio-lable amount-lable" for="20"><input class="input" id="20" type="radio" name="amount" value="20">20</label>
+                            <label class="radio-lable amount-lable" for="25"><input class="input" id="25" type="radio" name="amount" value="25">25</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="submit-btn-wrapper">
+                    <button class="btn">BUY</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- BUS STOPS FOR FUTURE USE -->
+    <div id="bus-stops" class="bus-stops hidden-element">
+        <div class="header">
+            <div class="hide-btn">
+                <div class="btn-wrapper">
+                    <div class="btn-lines btn-line-1"></div>
+                    <div class="btn-lines btn-line-2"></div>
+                </div>
+            </div>
+            <div class="heading"><p class="heading-text">Bus Stops</p></div>
+        </div>
+        <div class="stop-saver">
+            <div class="about"><p class="about-text">Save the starting and ending stop names for future use when purchasing tickets.</p></div>
+            <form id="stop-saver-form" class="stop-saver-form">
+                <input required id="stop-saver-starting-stop-input" placeholder="Enter starting stop" class="input" type="text">
+                <input required id="stop-saver-ending-stop-input" placeholder="Enter ending stop" class="input" type="text">
+                <button class="save-btn">Save</button>
+            </form>
+        </div>
+        <div class="saved-stops">
+            <div class="heading">
+                <p class="heading-text">Saved Stop Names</p>
+                <p class="refresh-btn"><i class="fa-solid fa-arrows-rotate"></i></p>
+            </div>
+            <div class="stop-delete-wrapper">
+                <!-- Element will be added by js -->
+            </div>
+            <div class="no-saved-stop-text"><p>The saved stop name will be displayed here.</p></div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer id="ftr" class="ftr">
+        <nav class="navigation">
+            <div class="item icon-bus"><i class="fa-solid fa-bus"></i></div>
+            <div class="item icon-ticket"><i class="fa-solid fa-ticket"></i></div>
+            <div class="item icon-charging"><i class="fa-solid fa-charging-station"></i></div>
+            <div class="item icon-maximize"><i class="fa-solid fa-maximize"></i></div>
+            <div class="item icon-minimize"><i class="fa-solid fa-minimize"></i></div>
+        </nav>
+    </footer>
+
+    <script src="js/returnEle.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/tkt-buyer.js"></script>
+    <script src="js/tkt-purchased.js"></script>
+    <script src="js/bus-stops.js"></script>
+
+</body>
+</html>

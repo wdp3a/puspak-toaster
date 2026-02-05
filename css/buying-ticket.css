@@ -51,6 +51,11 @@
 }
 
 /* <==***==> Container element of the form inputs of bus no, route, stops and price <==***==> */
+.bus-no-detail.bus-stop-payment-detail {
+    display: none;
+}
+
+
 .bus-stop-payment-detail{
     background: var(--bg-white);
     border-radius: 10px;

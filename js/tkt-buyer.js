@@ -35,7 +35,7 @@ formELe.addEventListener("submit", function (e) {
             busNoStartNo = ele.value
         }
     });
-    let bsNoValue = `${busNoStartNo}${busNoInputEnding.value}`;
+    // let bsNoValue = `${busNoStartNo}${busNoInputEnding.value}`;
 
     let routeValue = routeInput.value;
     let startingStopValue = startingStopInput.value;
@@ -62,7 +62,7 @@ formELe.addEventListener("submit", function (e) {
         }
     });
 
-    ticket.busNo = bsNoValue;
+    // ticket.busNo = bsNoValue;
     ticket.route = routeValue;
     ticket.startingStop = startingStopValue;
     ticket.endingStop = endingStopValue;

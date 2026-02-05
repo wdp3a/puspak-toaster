@@ -11,7 +11,7 @@ function purchasedTicketEle(no,rt,ss,es,tq,tc,am,bt){
 								<div class="bus-icon"  style="background-color: ${tc}"><i class="fa-solid fa-bus-simple"></i></div>
 								<div class="bus-detail">
 									<div class="route-no"><p>${rt}</p></div>
-									<div class="bus-no"><p>${no}</p></div>
+									<div class="bus-no"><p>VALIDATED</p></div>
 								</div>
 							</div>
 							<div class="success"><p>Success</p></div>
@@ -39,13 +39,15 @@ function purchasedTicketEle(no,rt,ss,es,tq,tc,am,bt){
     this function will return html that will be required to display the desired ticket in large form
 */
 function ticketDisplayELe(no,rt,ss,es,tq,tc,am,bt,tranId){
+    let validateText = document.getElementById("validated-section-text");
+    validateText.innerHTML = `Validated At: ${bt[0]}-${bt[1]}-${bt[4]} | ${bt[5]}:${bt[6]}`
     let tktDisplayELe = `
         <div class="tkt-lrg">
             <div class="heading"><p>Transport Dept. of Delhi</p></div>
             <!-- rt-fr-tm-qn -> bus-no, price, route-no, fare, booking-time, quantity -->
             <div class="bus-and-price-detail">
-                <div class="bus-no tkt-lrg-value">${no}</div>
-                <div class="price tkt-lrg-value">₹${((am * tq)-((am * tq) * 10 / 100)).toFixed(1)}</div>
+                <div class="bus-no tkt-lrg-value">VALIDATED</div>
+                <div class="price tkt-lrg-value">₹${(am * tq).toFixed(1)}</div>
             </div>
             <div class="tkt-lrg-sep"></div>
             <div class="rt-fr-tm-qn route-and-fare-detail">
@@ -55,7 +57,7 @@ function ticketDisplayELe(no,rt,ss,es,tq,tc,am,bt,tranId){
                 </div>
                 <div class="fare-wrapper">
                     <div class="text">Fare</div>
-                    <div class="fare tkt-lrg-value">₹${(am * tq).toFixed(1)}</div>
+                    <div class="fare tkt-lrg-value">₹${((am * tq)-((am * tq) * 10 / 100)).toFixed(1)}</div>
                 </div>
             </div>
             <div class="rt-fr-tm-qn bkg-time-and-quan-detail">

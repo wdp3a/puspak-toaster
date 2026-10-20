@@ -184,6 +184,15 @@ body.overflow-none{
 /*  <======>  <======>  for all input  <======>  <======>  */
 
 
+/* SVG Icons */
+.icon-svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    display: inline-block;
+    vertical-align: -0.125em;
+}
+
 /* TOUCHING TOP BORDER */
 .touching-top{
     border-bottom: 1px solid var(--grey-5);

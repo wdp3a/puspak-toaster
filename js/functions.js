@@ -127,7 +127,7 @@ function tktdisplayManager(tktIndex) {
 	// checking if the tkt is invalid or not
 	let tktEle = document.querySelector(".tkt-lrg");
 	if (!checkDate(storeTickets[tktIndex].bookingTime[4], (storeTickets[tktIndex].bookingTime[1] - 1), storeTickets[tktIndex].bookingTime[0], storeTickets[tktIndex].bookingTime[5], storeTickets[tktIndex].bookingTime[6], storeTickets[tktIndex].bookingTime[7])) {
-		let invalidContainerELe = tktEle.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;;
+		let invalidContainerELe = tktEle.querySelector(".tkt-invalid-container");
 		invalidContainerELe.style.display = "none";
 	};
 };

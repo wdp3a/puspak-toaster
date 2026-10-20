@@ -37,3 +37,22 @@ html.fullscreen .ftr{
 .ftr .navigation .item:nth-child(2){
     color: #c7342a;
 }
+
+/* Navigation SVG icons via CSS mask */
+.ftr .navigation .item .nav-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: currentColor;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+.icon-bus .nav-icon { -webkit-mask-image: url('../src/icons/bus.svg'); mask-image: url('../src/icons/bus.svg'); }
+.icon-ticket .nav-icon { -webkit-mask-image: url('../src/icons/ticket.svg'); mask-image: url('../src/icons/ticket.svg'); }
+.icon-charging .nav-icon { -webkit-mask-image: url('../src/icons/charging-station.svg'); mask-image: url('../src/icons/charging-station.svg'); }
+.icon-maximize .nav-icon { -webkit-mask-image: url('../src/icons/arrows-maximize.svg'); mask-image: url('../src/icons/arrows-maximize.svg'); }
+.icon-minimize .nav-icon { -webkit-mask-image: url('../src/icons/arrows-minimize.svg'); mask-image: url('../src/icons/arrows-minimize.svg'); }

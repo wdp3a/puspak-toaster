@@ -60,7 +60,7 @@ minimizeIcon.addEventListener("click", function (e) {
         document.exitFullscreen();
         htmlElement.classList.remove("fullscreen")
     } else if (document.cancelFullScreen) {
-        document.document.webkitCancelFullScreen();
+        document.webkitCancelFullScreen();
         htmlElement.classList.remove("fullscreen")
     } else if (document.cancelFullScreen) {
         document.cancelFullScreen();

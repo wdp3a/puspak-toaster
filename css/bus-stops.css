@@ -155,12 +155,11 @@
     align-items: center;
 }
 .stop-delete-container .starting-ending .starting-ending-stop:first-child{ padding-bottom: 5px; }
-.stop-delete-container .starting-ending i{
-    font-size: 14px;
-    width: 15px;
-    display: flex;
-    justify-content: center;
-    color: var(--black-3);
+.stop-delete-container .starting-ending svg{
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    fill: var(--black-3);
 }
 .stop-delete-container .starting-ending p{
     font-size: 18px;

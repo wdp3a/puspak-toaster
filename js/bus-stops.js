@@ -93,7 +93,7 @@ function savedStopDisplayManager(){
             SavedStopEles[i].addEventListener('click', function(e){
                 if(e.target === SavedStopEles[i].firstElementChild.nextElementSibling || e.target ===  SavedStopEles[i].firstElementChild.nextElementSibling.firstElementChild || e.target ===  SavedStopEles[i].firstElementChild.nextElementSibling.firstElementChild.firstElementChild){
                     SavedStopEles[i].remove();
-                    storedData.shift(i);
+                    storedData.splice(i, 1);
                     if (storedData.length === 0 ){
                         localStorage.removeItem('stops-name');
                         noStopSavedEle.classList.remove('hide');

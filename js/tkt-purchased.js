@@ -6,28 +6,36 @@ let ticketContainer = document.querySelector(".purchased-tkt-container .tkt-cont
 large form */
 let ticketEle;
 
-if (localStorage.getItem("tickets") === null) {
-    null;
-} else {
-    noTicketAvailable.style.display = "none";
-    let storeTickets = JSON.parse(localStorage.getItem("tickets"));
-    let ticketElement = purchasedTicketEle(storeTickets[0].busNo, storeTickets[0].route, storeTickets[0].startingStop, storeTickets[0].endingStop, storeTickets[0].ticketQuan, storeTickets[0].ticketColors, storeTickets[0].amount, storeTickets[0].bookingTime);
-
-    ticketContainer.innerHTML = ticketElement
-    ticketEle = document.querySelector(".purchased-bus-tkt .tkt");
-    if (!checkDate(storeTickets[0].bookingTime[4], (storeTickets[0].bookingTime[1] - 1), storeTickets[0].bookingTime[0], storeTickets[0].bookingTime[5], storeTickets[0].bookingTime[6], storeTickets[0].bookingTime[7])) {
-        document.querySelector(".tkt-invalid-container").style.display = "none";
-    };
-
-    /*
-     * to see the purchased ticket in large form 
-     */
-    ticketEle.addEventListener("click", function () {
+function displayPurchasedTicket() {
+    if (localStorage.getItem("tickets") === null) {
+        noTicketAvailable.style.display = "block";
+        ticketContainer.innerHTML = "";
+    } else {
         noTicketAvailable.style.display = "none";
-        tktdisplayManager(0);
-    });
+        let storeTickets = JSON.parse(localStorage.getItem("tickets"));
+        let ticketElement = purchasedTicketEle(storeTickets[0].busNo, storeTickets[0].route, storeTickets[0].startingStop, storeTickets[0].endingStop, storeTickets[0].ticketQuan, storeTickets[0].ticketColors, storeTickets[0].amount, storeTickets[0].bookingTime);
 
-};
+        ticketContainer.innerHTML = ticketElement;
+        ticketEle = document.querySelector(".purchased-bus-tkt .tkt");
+        if (!checkDate(storeTickets[0].bookingTime[4], (storeTickets[0].bookingTime[1] - 1), storeTickets[0].bookingTime[0], storeTickets[0].bookingTime[5], storeTickets[0].bookingTime[6], storeTickets[0].bookingTime[7])) {
+            let invalidContainerELe = ticketEle.querySelector(".tkt-invalid-container");
+            if (invalidContainerELe) {
+                invalidContainerELe.style.display = "none";
+            }
+        };
+
+        /*
+         * to see the purchased ticket in large form 
+         */
+        ticketEle.addEventListener("click", function () {
+            noTicketAvailable.style.display = "none";
+            tktdisplayManager(0);
+        });
+
+    }
+}
+
+displayPurchasedTicket();
 
 // CLOSING THE LARGE TKT
 let ticketDisplayCloseBtn = document.querySelector(".tkt-lrg-container .tkt-lrg-container-header .btn-wrapper");

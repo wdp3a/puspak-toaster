@@ -91,6 +91,18 @@ formELe.addEventListener("submit", function (e) {
         localStorage.setItem("tickets", newstorageData);
     };
 
-    location.reload();
+    // Close the buy ticket section
+    tktBuyerELe.classList.remove("active");
+    HTMLbody.classList.remove("overflow-none");
 
+    // Reset the form inputs and radio styles
+    formELe.reset();
+    document.querySelectorAll(".tkt-buyer-form .checked").forEach(function (ele) {
+        ele.classList.remove("checked");
+    });
+
+    // Update the purchased ticket display on the home screen
+    if (typeof displayPurchasedTicket === "function") {
+        displayPurchasedTicket();
+    }
 });
